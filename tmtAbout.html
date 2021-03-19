@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <style>
+
+      body {
+        margin: 0px;
+        background-color: #F7F4EA;
+
+      }
+      div {
+        position: relative;
+      }
+
+/*Desktop Navbar + LOGO*/
+      #row1 {
+        width: 100%;
+        height: 0px;
+        background-color: red;
+      }
+      #logo {
+        width: 130px;
+        height: 60px;
+        float: left;
+        position: fixed;
+        background-color: rgba(225, 225, 225, .5);
+        z-index: 2;
+
+      }
+      #logoIMG {
+        width: 55%;
+        height: 100%;
+        margin-left: 5px;
+        opacity: 1;
+      }
+
+      .flex-containerNav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        float: right;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 2;
+        margin-left: 130px;
+        background-color: rgba(225, 225, 225, .5);
+
+      }
+
+      .flex-containerNav div {
+        width: 140px;
+        height: 75px;
+        margin-right: 2%;
+        margin-left: 12%;
+        margin-top: 10px;
+      }
+
+      .navLink {
+        height: 100%;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        position: relative;
+        letter-spacing: 7px;
+        margin-left: 10px;
+        font-family: 'Bebas Neue', cursive;
+      }
+
+      .navLink:hover {
+        color: #fff;
+      }
+      .navLink::before {
+        content: "";
+        position: absolute;
+        width: 84%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .navLink:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+/*Title Screen*/
+      #aboutTitle {
+        width: 100%;
+        height: 690px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        background-attachment: fixed;
+        background-color: #ffa114;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      }
+      #aboutTitle div {
+        width: 900px;
+        height: 300px;
+        margin-top: 200px;
+        color: white;
+        font-size: 250px;
+      }
+      #aboutTitle div p {
+        margin-left: 80px;
+        margin-top: 20px;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: 2px 2px 15px rgba(225, 225, 225, .70);
+      }
+
+/*Owner desktop Styles*/
+      #row2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 450px;
+      }
+      #leftCol {
+        width: 250px;
+        height: 100%;
+      }
+      #circleImgOwner {
+        width: 200px;
+        height: 200px;
+        border-radius: 130px;
+        margin-top: 20px;
+        margin-left: 25px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+            0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+            border-radius: 130px;
+      }
+      #circleImgOwner img {
+        width: 100%;
+        height: 100%;
+        border-radius: 130px;
+      }
+      #OwnerName {
+        width: 950px;
+        height: 100%;
+      }
+      #OwnerName p {
+        width: 750px;
+        height: 100px;
+        margin-top: 50px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 100px;
+        margin-left: 30px;
+        margin-bottom: 40px;
+      }
+      #OwnerInfo {
+        background-image: url('IMAGES/INFO.png');
+        background-repeat: repeat;
+        background-size: contain;
+        width: 700px;
+        height: 250px;
+        font-family: 'Nixie One', cursive;
+        font-size: 30px;
+        line-height: 45px;
+        margin-left: 150px;
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+
+      }
+
+/*Company desktop Styles*/
+      #row4 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 600px;
+      }
+      #leftCol2 {
+        width: 250px;
+        height: 100%;
+      }
+      #circleImgLogo {
+        width: 200px;
+        height: 200px;
+        border-radius: 130px;
+        margin-top: 20px;
+        margin-left: 25px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+            0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+            border-radius: 130px;
+      }
+      #circleImgLogo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 130px;
+      }
+      #CompanyName {
+        width: 950px;
+        height: 100%;
+      }
+      #CompanyName p {
+        width: 750px;
+        height: 100px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 100px;
+        margin-left: 30px;
+      }
+      #CompanyInfo {
+        background-image: url('IMAGES/INFO.png');
+        background-repeat: repeat;
+        background-size: contain;
+        width: 700px;
+        height: 420px;
+        font-family: 'Nixie One', cursive;
+        font-size: 30px;
+        line-height: 45px;
+        text-align: center;
+        margin-left: 150px;
+        margin-top: 20px;
+        color: white;
+      }
+/*Contact desktop Styles*/
+
+      #row6 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 150px;
+      }
+      #contactUs {
+        width: 95%;
+        height: 100px;
+        margin: 25px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 100px;
+      }
+      #row7 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+        background-color: #ffa114;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      }
+      #contactInfo {
+        width: 90%;
+        height: 300px;
+        margin-left: 5%;
+        margin-top: 3%;
+        font-family: 'Nixie One', cursive;
+        font-size: 50px;
+      }
+      .socialIcon {
+        width: 60px;
+        height: 60px;
+        margin-left: 15px;
+        margin-right: 10px;
+        margin-top: 7px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        #logo {
+          background-color: rgba(225, 225, 225, .5);
+          width: 130px;
+          height: 60px;
+        }
+        #logoIMG {
+          width: 55%;
+          height: 100%;
+          opacity: 1;
+        }
+
+/*owner desktop2 styles*/
+        #row2 {
+          height: 550px;
+        }
+        #leftCol {
+          width: 200px;
+        }
+        #circleImgOwner {
+          width: 175px;
+          height: 175px;
+          margin-left: 10px;
+        }
+        #OwnerName {
+          width: 720px;
+        }
+        #OwnerName p {
+          width: 570px;
+        }
+        #OwnerInfo {
+          width: 520px;
+          height: 350px;
+          margin-left: 100px;
+        }
+
+/*Company desktop2 styles*/
+        #row4 {
+          height: 750px;
+        }
+        #leftCol2 {
+          width: 200px;
+        }
+        #circleImgLogo {
+          width: 175px;
+          height: 175px;
+          margin-left: 10px;
+        }
+        #CompanyName {
+          width: 720px;
+        }
+        #CompanyName p {
+          width: 570px;
+        }
+        #CompanyInfo {
+          width: 600px;
+          height: 500px;
+          margin-left: 100px;
+        }
+        #row7 {
+          height: 300px;
+        }
+        #contactInfo {
+          font-size: 40px;
+          height: 200px;
+        }
+        .socialIcon {
+          margin-left: 0px;
+          margin-right: 0px;
+          width: 35px;
+          height: 35px;
+        }
+
+      }
+
+      @media screen and (max-width: 930px) {
+
+/*Tablet Navbar + LOGO*/
+        #logo {
+          width: 100%;
+          background-attachment: fixed;
+          background-color: rgba(225,225,225,0);
+        }
+        #logoIMG {
+          width: 72px;
+        }
+        .flex-containerNav {
+          width: 500px;
+          position: fixed;
+          bottom: 0;
+          height: 60px;
+          overflow: hidden;
+          z-index: 2;
+          margin-left: 15%;
+          margin-top: 10px;
+          border-radius: 40px;
+          margin-bottom: 15px;
+          background-color: rgba(0,0,0,.6);
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: left;
+
+        }
+        .flex-containerNav div {
+          width: 135px;
+          margin-left: 8px;
+          margin-right: 5px;
+        }
+        .flex-containerNav #shop, #about, #contactNav {
+          margin-top: 13px;
+        }
+        .flex-containerNav #shop{
+          margin-left: 30px;
+        }
+        .flex-containerNav #about{
+          margin-left: 0px;
+        }
+        .flex-containerNav #contactNav {
+          margin-left: 17px;
+        }
+        .navLink {
+          color: white;
+          margin-left: 35px;
+        }
+        .navLink:active {
+          color: #CE8612;
+        }
+        .navLink::before {
+          content: none;
+        }
+
+
+/*TABLET Title Screen */
+        #aboutTitle div p{
+          font-size: 200px;
+          margin-left: 20px;
+        }
+
+
+/*TABLET owner styles*/
+        #row2 {
+          height: 700px;
+          margin-bottom: 200px;
+        }
+        #leftCol {
+          width: 100%;
+          height: 240px;
+        }
+        #circleImgOwner {
+          width: 220px;
+          height: 220px;
+          margin-left: 35%;
+        }
+        #OwnerName {
+          width: 100%;
+          height: 500px;
+          justify-content: center;
+        }
+        #OwnerName p {
+          width: 100%;
+          font-size: 80px;
+          margin-left: 0;
+        }
+        #OwnerInfo {
+          width: 100%;
+          height: 420px;
+          margin-left: 0;
+          line-height: 60px;
+          font-size: 40px;
+        }
+
+
+/*TABLET Company Styles*/
+        #row4 {
+          height: 650px;
+          margin-bottom: 200px;
+        }
+        #leftCol2 {
+          width: 100%;
+          height: 240px;
+        }
+        #circleImgLogo {
+          width: 220px;
+          height: 220px;
+          margin-left: 35%;
+        }
+        #CompanyName {
+          width: 100%;
+          height: 500px;
+        }
+        #CompanyName p {
+          width: 100%;
+          margin-left: 0;
+          font-size: 80px;
+        }
+        #CompanyInfo {
+          width: 100%;
+          height: 420px;
+          margin-left: 0;
+        }
+        #row7 {
+          height: 400px;
+        }
+
+      }
+
+      @media screen and (max-width: 710px) {
+
+/*MOBILE Navbar + LOGO*/
+        .flex-containerNav {
+          width: 370px;
+          z-index: 3;
+        }
+        .flex-containerNav div {
+          width: 100px;
+        }
+        .navLink {
+          font-size: 30px;
+          margin-left: 20px;
+          margin-right: 0px;
+          background-color: rgba(0,0,0,0);
+          color: white;
+          letter-spacing: 3px;
+        }
+        .navLink:active {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+
+/*MOBILE Title Screen*/
+        #aboutTitle div p{
+          font-size: 160px;
+          z-index: 0;
+        }
+
+/*MOBILE Owner Styles*/
+        #circleImgOwner {
+          margin-left: 30%;
+        }
+        #OwnerInfo {
+          font-size: 30px;
+        }
+
+/*MOBILE Company Styles*/
+        #row4 {
+          height: 800px;
+          margin-bottom: 250px;
+        }
+        #circleImgLogo {
+          margin-left: 30%;
+        }
+        #CompanyInfo {
+          font-size: 30px;
+          height: 600px;
+        }
+        #row7 {
+          height: 400px;
+        }
+        #contactInfo {
+          font-size: 30px;
+        }
+        .socialIcon {
+          width: 50px;
+          height: 50px;
+          margin-left: 50px;
+          margin-top: 20px;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="row1">
+
+      <!--LOGO-->
+      <div id="logo">
+        <a href="tmtMain.html" target="_self"><img id="logoIMG" src = "IMAGES/LogosSocials/TMTLOGO(3) copy.png"></img></a>
+      </div>
+      <!--OG SideNav-->
+      <div class = "flex-containerNav">
+          <div id="shop"><a class = "navLink" href = "TMTshop.html">Shop</a></div>
+          <div id="about"><a class = "navLink" href = "TMTabout.html">About</a></div>
+          <div id="contactNav"><a class = "navLink" href = "tmtBuy.html">Buy</a></div>
+      </div>
+    </div>
+
+    <div id="aboutTitle">
+      <div id="aboutDiv"><p>ABOUT US</p></div>
+    </div>
+
+    <div id="row2">
+      <div id="leftCol"><div id="circleImgOwner"><img src="IMAGES/AboutImages/OwnerImage.JPG"></img></div></div>
+      <div id="OwnerName"><p>Kenton Wenger</p>
+        <div id="OwnerInfo">Kenton Wenger Lives in Lititz, PA and is a Junior at Warwick High School. The idea for TOO MANY TACOS came from him and a friend's mind in the summer of 2020! He is the owner and creator of TOO MANY TACOS.</div>
+      </div>
+    </div>
+
+    <div id="row4">
+      <div id="leftCol2"><div id="circleImgLogo"><img src="IMAGES/LogosSocials/TMTLOGO(3) copy.png"></img></div></div>
+      <div id="CompanyName"><p>Too Many Tacos</p>
+        <div id="CompanyInfo">TOO MANY TACOS is a brand brought to you by Kenton Wenger. It started as an inside joke between him and some friends in the summer of 2020. It is now the home of all your Jesus merchandise needs! The goal of TOO MANY TACOS is to allow for an easy way to start conversations about your faith using something that everybody loves: interesting and funky clothes made just for you!</div>
+      </div>
+    </div>
+
+
+    <div id="row6">
+      <div id="contactUs">Contact</div>
+    </div>
+
+    <div id="row7">
+      <div id="contactInfo"><u>Email Us!</u><br><br>@toomanytacos@gmail.com<br><br>Follow Us on Social Media:
+        <img class="socialIcon" src="IMAGES/LogosSocials/twitter.png"></img>
+        <img class="socialIcon" src="IMAGES/LogosSocials/facebook.png"></img>
+        <img class="socialIcon" src="IMAGES/LogosSocials/youtube.png"></img>
+        <a href="https://www.instagram.com/toomanytacos.official/" target="_blank"><img class="socialIcon" src="IMAGES/LogosSocials/instagram.png"></img></a>
+      </div>
+    </div>
+
+  </body>
+</html>

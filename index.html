@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script language="javascript">
+
+    </script>
+    <style>
+
+      body {
+        margin: 0px;
+        background-color: #F7F4EA;
+      }
+      div {
+        position: relative;
+      }
+
+      #row1 {
+        width: 100%;
+        height: 800px;
+        background-image: url("IMAGES/HomePageImages/TMTBACK.png");
+        background-attachment: fixed;
+        opacity: 0.85;
+
+      }
+
+      #logo {
+        width: 130px;
+        height: 60px;
+        float: left;
+        position: fixed;
+        background-color: rgba(225, 225, 225, .6);
+
+      }
+
+      #logoIMG {
+        width: 55%;
+        height: 100%;
+        margin-left: 5px;
+        opacity: 1;
+      }
+
+        .flex-containerNav {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          float: right;
+          width: 100%;
+          height: 60px;
+          position: fixed;
+          z-index: 2;
+          margin-left: 130px;
+          background-color: rgba(225, 225, 225, .6);
+
+        }
+
+        .flex-containerNav div {
+          width: 140px;
+          height: 75px;
+          margin-right: 2%;
+          margin-left: 12%;
+          margin-top: 10px;
+        }
+
+        .navLink {
+          height: 100%;
+          text-decoration: none;
+          color: black;
+          font-size: 30px;
+          position: relative;
+          letter-spacing: 7px;
+          margin-left: 10px;
+          font-family: 'Bebas Neue', cursive;
+        }
+
+        .navLink:hover {
+          color: #fff;
+        }
+        .navLink::before {
+          content: "";
+          position: absolute;
+          width: 84%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #fff;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+        .navLink:hover::before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+        #space1 {
+          width: 100%;
+          height: 5px;
+          margin-bottom: 50px;
+        }
+
+        .flex-containerTMTtext {
+          width: 60%;
+          height: 700px;
+          z-index: -1;
+        }
+
+        .flex-containerTMTtext div{
+          width: 100%;
+          height: 100%;
+        }
+        #tmtText {
+          font-size: 190px;
+          color: white;
+          margin-left: 45px;
+          font-family: 'Bebas Neue', cursive;
+          letter-spacing: 65px;
+        }
+
+        .flex-containerLines {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: 100%;
+          height: 120px;
+          margin-top: 40px;
+          z-index: -1;
+          opacity: .9;
+        }
+        #line1 {
+          width: 100%;
+          height: 30%;
+          background-color: #CE8612;
+        }
+        #line2 {
+          width: 100%;
+          height: 30%;
+          background-color: #F45D52;
+        }
+        #line3 {
+          width: 100%;
+          height: 30%;
+          background-color: #56876D;
+        }
+
+        .flex-containerPic {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          z-index: -1;
+        }
+        .flex-containerPic div {
+          width: 1300px;
+          height: 550px;
+          margin: 10px;
+          z-index: -1;
+          box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+              0 2px 2px rgba(0,0,0,0.12),
+              0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+        }
+
+        .pic {
+          width: 100%;
+          height: 100%;
+        }
+
+
+        .flex-containerNew {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          z-index: -1;
+          background-color: #ffa114;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+          margin-top: 60px;
+
+        }
+        .flex-containerNew div {
+          width: 600px;
+          height: 100px;
+          margin-left: 20px;
+          margin-top: 20px;
+          z-index: -1;
+          font-family: 'Bebas Neue', cursive;
+          font-size: 90px;
+          color: white;
+        }
+        .flex-containerNewImages {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          z-index: -1;
+          background-color: #CE8612;
+
+
+        }
+        .drop {
+          width: 100%;
+          height: 100%;
+        }
+        .flex-containerNewImages div {
+          width: 400px;
+          height: 400px;
+          margin-top: 45px;
+          margin-left: 20px;
+          margin-right: 20px;
+          z-index: -1;
+          box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+              0 2px 2px rgba(0,0,0,0.12),
+              0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+        }
+
+
+
+
+        .flex-containerContact {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          margin-bottom: 0px;
+          z-index: -1;
+          background-color: #ce8612;
+
+        }
+        .flex-containerContact #contact {
+          width: 300px;
+          height: 75px;
+          margin-top: 30px;
+          z-index: -1;
+        }
+        #contactTEXT {
+          width: 100%;
+          height: 100%;
+          margin-left: 10px;
+          margin-top: 25px;
+          font-size: 20px;
+          color: white;
+        }
+        .flex-containerContact #socials {
+          width: 340px;
+          height: 75px;
+          margin-top: 30px;
+          z-index: -1;
+        }
+        .socialIcon {
+          width: 60px;
+          height: 60px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 7px;
+        }
+
+        #space {
+          width: 100%;
+          height: 30px;
+          z-index: -1;
+          background-color: #ce8612;
+        }
+
+
+        @media screen and (max-width: 1200px) {
+          #logo {
+            background-color: rgba(225, 225, 225, .8);
+            width: 130px;
+            height: 60px;
+          }
+          #logoIMG {
+            width: 55%;
+            height: 100%;
+            opacity: 1;
+          }
+
+          .flex-containerPic div {
+            width: 1000px;
+            height: 450px;
+          }
+
+          .flex-containerContact #socials {
+            width: 300px;
+            height: 130px;
+          }
+          .socialIcon {
+            width: 40px;
+            height: 40px;
+          }
+
+
+        }
+
+        @media screen and (max-width: 930px) {
+          #logo {
+            width: 100%;
+            background-color: inherit;
+          }
+          #logoIMG {
+            width: 72px;
+          }
+          .flex-containerNav {
+            width: 500px;
+            position: fixed;
+            bottom: 0;
+            height: 60px;
+            overflow: hidden;
+            z-index: 2;
+            margin-left: 15%;
+            margin-top: 10px;
+            border-radius: 40px;
+            margin-bottom: 15px;
+            background-color: rgba(0,0,0,.6);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: left;
+
+          }
+          .flex-containerNav div {
+            width: 135px;
+            margin-left: 8px;
+            margin-right: 5px;
+          }
+          .flex-containerNav #shop, #about, #contactNav {
+            margin-top: 13px;
+          }
+          .flex-containerNav #shop{
+            margin-left: 30px;
+          }
+          .flex-containerNav #about{
+            margin-left: 0px;
+          }
+          .flex-containerNav #contactNav {
+            margin-left: 17px;
+          }
+          .navLink {
+            color: white;
+            margin-left: 35px;
+          }
+          .navLink:active {
+            color: #CE8612;
+          }
+          .navLink::before {
+            content: none;
+          }
+
+          .flex-containerPic {
+            height: 1100px;
+
+          }
+          .flex-containerPic div {
+            width: 800px;
+            height: 350px;
+          }
+
+          .flex-containerContact #contact {
+            width: 300px;
+          }
+          .flex-containerContact #socials {
+            width: 150px;
+          }
+          #contactTEXT {
+            font-size: 20px;
+          }
+          .socialIcon {
+            width: 40px;
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+          #space {
+            height: 60px;
+          }
+
+        }
+
+
+
+        @media screen and (max-width: 710px) {
+          #row1 {
+            background-image: url("IMAGES/HomePageImages/TMTBACK2.png");
+          }
+          .flex-containerNav {
+            width: 370px;
+            z-index: 3;
+          }
+          .flex-containerNav div {
+            width: 100px;
+          }
+          .navLink {
+            font-size: 30px;
+            margin-left: 20px;
+            margin-right: 0px;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            letter-spacing: 3px;
+          }
+          .navLink:active {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+
+          #tmtText {
+            font-size: 178px;
+            color: white;
+            margin-left: 15px;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 30px;
+          }
+          .flex-containerPic {
+            height: 670px;
+          }
+          .flex-containerPic div {
+            width: 500px;
+            height: 210px;
+          }
+
+        }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <!--row1-->
+
+    <div id="row1">
+
+      <!--LOGO-->
+      <div id="logo">
+        <a id="logoA" href="tmtMain.html" target="mainframe"><img id="logoIMG" src = "IMAGES/LogosSocials/TMTLOGO(3) copy.png"></img></a>
+      </div>
+      <!--OG SideNav-->
+      <div class = "flex-containerNav">
+          <div id="shop"><a class = "navLink" href = "TMTshop.html">Shop</a></div>
+          <div id="about"><a class = "navLink" href = "TMTabout.html">About</a></div>
+          <div id="contactNav"><a class = "navLink" href = "tmtBuy.html">Buy</a></div>
+      </div>
+
+
+      <div id="space1"></div>
+
+      <div class="flex-containerTMTtext">
+        <div id="tmtText">Too Many Tacos</div>
+      </div>
+
+    </div>
+
+    <div class="flex-containerLines">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
+    </div>
+
+    <!--row2-->
+      <div class = "flex-containerPic">
+        <div id="picture2"><img class = "pic" src ="IMAGES/HomePageImages/picture2.jpg"></img></div>
+        <div id="picture1"><img class="pic" src = "IMAGES/HomePageImages/picture1.jpg"></img></div>
+        <div id="picture3"><img class = "pic" src ="IMAGES/HomePageImages/picture3.jpg"></img></div>
+      </div>
+
+
+
+      <!--row3-->
+      <div class = "flex-containerNew">
+        <div id="newProducts">Newest Drop</div>
+      </div>
+
+      <!--row4-->
+      <div class = "flex-containerNewImages">
+        <div id="imageOne"><img class = "drop" src ="IMAGES/HomePageImages/IMG_2487.jpg"></img></div>
+        <div id="imageTwo"><img class = "drop" src = "IMAGES/HomePageImages/IMG_2488.jpg"></img></div>
+        <div id="imageThree"><img class = "drop" src = "IMAGES/HomePageImages/IMG_2483.jpg"></img></div>
+      </div>
+
+
+
+      <!--row5-->
+        <div class = "flex-containerContact">
+          <div id ="contact"><div id="contactTEXT">Email: toomanytacos@gmail.com</div></div>
+          <div id="socials">
+            <img class="socialIcon" src="IMAGES/LogosSocials/twitter.png"></img>
+            <img class="socialIcon" src="IMAGES/LogosSocials/facebook.png"></img>
+            <img class="socialIcon" src="IMAGES/LogosSocials/youtube.png"></img>
+            <!--get instagram link to work!!-->
+            <a href="https://www.instagram.com/toomanytacos.official/" target="_blank"><img class="socialIcon" src="IMAGES/LogosSocials/instagram.png"></img></a>
+          </div>
+        </div>
+
+        <!--row6-->
+        <div id="space"></div>
+
+
+  </body>
+</html>

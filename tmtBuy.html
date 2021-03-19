@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <style>
+
+      body {
+        margin: 0px;
+        background-color: #F7F4EA;
+
+      }
+      div {
+        position: relative;
+      }
+
+  /*Desktop Navbar + LOGO*/
+      #row1 {
+        width: 100%;
+        height: 0px;
+        background-color: red;
+      }
+      #logo {
+        width: 130px;
+        height: 60px;
+        float: left;
+        position: fixed;
+        background-color: rgba(225, 225, 225, .5);
+        z-index: 2;
+
+      }
+      #logoIMG {
+        width: 55%;
+        height: 100%;
+        margin-left: 5px;
+        opacity: 1;
+      }
+
+      .flex-containerNav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        float: right;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 2;
+        margin-left: 130px;
+        background-color: rgba(225, 225, 225, .5);
+
+      }
+
+      .flex-containerNav div {
+        width: 140px;
+        height: 75px;
+        margin-right: 2%;
+        margin-left: 12%;
+        margin-top: 10px;
+      }
+
+      .navLink {
+        height: 100%;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        position: relative;
+        letter-spacing: 7px;
+        margin-left: 10px;
+        font-family: 'Bebas Neue', cursive;
+      }
+
+      .navLink:hover {
+        color: #fff;
+      }
+      .navLink::before {
+        content: "";
+        position: absolute;
+        width: 84%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .navLink:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+/*BuyTitleScreen*/
+      #BuyTitle {
+        width: 100%;
+        height: 690px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        background-attachment: fixed;
+        background-color: #ffa114;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      }
+      #BuyDiv {
+        width: 1100px;
+        height: 300px;
+        margin-top: 200px;
+        color: white;
+        font-size: 250px;
+      }
+      #BuyTitle div p {
+        margin-left: 40px;
+        margin-top: 20px;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: 2px 2px 15px rgba(225, 225, 225, .70);
+      }
+      #row3 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 300px;
+        margin-top: 40px;
+      }
+      #howToShop {
+        width: 90%;
+        height: 85%;
+        background-image: url('IMAGES/INFO.png');
+        margin-left: 70px;
+        margin-top: 30px;
+        font-size: 43px;
+        text-align: center;
+        font-family: 'Nixie One', cursive;
+        color: white;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+            0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+      }
+      #howToShop #bold {
+        font-size: 40px;
+        font-weight: 800;
+      }
+      #howToShop #notBold {
+        font-size: 35px;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+      #row4 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 700px;
+        margin-top: 30px;
+        background-image: url('IMAGES/SHOPback.png');
+      }
+      #row5 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+      }
+      #button {
+        width: 350px;
+        height: 75px;
+        font-size: 50px;
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+        margin-top: 50px;
+        border-radius: 50px;
+        border-width: 2px;
+        border-color: rgba(0,0,0,0);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+            0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+            border-radius: 50px;
+        background-image: url('IMAGES/button.png');
+      }
+      #button:hover {
+        background-color: #ffa114;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+        cursor: pointer;
+      }
+
+
+      @media screen and (max-width: 1200px) {
+        #logo {
+          background-color: rgba(225, 225, 225, .5);
+          width: 130px;
+          height: 60px;
+        }
+        #logoIMG {
+          width: 55%;
+          height: 100%;
+          opacity: 1;
+        }
+        #BuyDiv {
+          font-size: 220px;
+        }
+        #howToShop {
+          height: 320px;
+          margin-left: 50px;
+        }
+        #row4 {
+          margin-top: 100px;
+        }
+      }
+        @media screen and (max-width: 930px) {
+
+  /*Tablet Navbar + LOGO*/
+          #logo {
+            width: 100%;
+            background-attachment: fixed;
+            background-color: rgba(225,225,225,0);
+          }
+          #logoIMG {
+            width: 72px;
+          }
+          .flex-containerNav {
+            width: 500px;
+            position: fixed;
+            bottom: 0;
+            height: 60px;
+            overflow: hidden;
+            z-index: 2;
+            margin-left: 15%;
+            margin-top: 10px;
+            border-radius: 40px;
+            margin-bottom: 15px;
+            background-color: rgba(0,0,0,.6);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: left;
+
+          }
+          .flex-containerNav div {
+            width: 135px;
+            margin-left: 8px;
+            margin-right: 5px;
+          }
+          .flex-containerNav #shop, #about, #contactNav {
+            margin-top: 13px;
+          }
+          .flex-containerNav #shop{
+            margin-left: 30px;
+          }
+          .flex-containerNav #about{
+            margin-left: 0px;
+          }
+          .flex-containerNav #contactNav {
+            margin-left: 17px;
+          }
+          .navLink {
+            color: white;
+            margin-left: 35px;
+          }
+          .navLink:active {
+            color: #CE8612;
+          }
+          .navLink::before {
+            content: none;
+          }
+          #BuyDiv {
+            font-size: 170px;
+          }
+          #howToShop {
+            margin-left: 0px;
+            width: 100%;
+            height: 350px;
+          }
+          #row4 {
+            margin-top: 130px;
+          }
+          #row5 {
+            height: 250px;
+          }
+        }
+        @media screen and (max-width: 710px) {
+
+  /*MOBILE Navbar + LOGO*/
+          .flex-containerNav {
+            width: 370px;
+            z-index: 3;
+          }
+          .flex-containerNav div {
+            width: 100px;
+          }
+          .navLink {
+            font-size: 30px;
+            margin-left: 20px;
+            margin-right: 0px;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            letter-spacing: 3px;
+          }
+          .navLink:active {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+          #BuyDiv {
+            margin-top: 130px;
+          }
+          #howToShop {
+            height: 485px;
+          }
+          #row4 {
+            margin-top: 250px;
+          }
+        }
+    </style>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="tmtMain.html" target="_self"><img id="logoIMG" src = "IMAGES/LogosSocials/TMTLOGO(3) copy.png"></img></a>
+    </div>
+      <!--OG SideNav-->
+      <div class = "flex-containerNav">
+        <div id="shop"><a class = "navLink" href = "MTshop.html">Shop</a></div>
+        <div id="about"><a class = "navLink" href = "TMTabout.html">About</a></div>
+        <div id="contactNav"><a class = "navLink" href = "TMTcontact.html">Buy</a></div>
+      </div>
+    </div>
+
+    <div id="BuyTitle">
+      <div id="BuyDiv"><p>How To Shop</p></div>
+    </div>
+
+    <div id="row3">
+      <div id="howToShop"><p id="notBold">Unfortunately for your convenience, a third party website makes and directly sells our TOO MANY TACOS merchandise.</p><p id="bold">In order to buy TOO MANY TACOS merchandise, you can click the button at the bottom of this page.</p></div>
+    </div>
+
+    <div id="row4">
+      <div id="howToBuy"></div>
+    </div>
+
+    <div id="row5">
+      <form action="https://www.bonfire.com/store/too-many-tacos/" method="get" target="_blank">
+         <button id="button" type="submit">Buy TMT Merch!</button>
+    </div>
+
+  </body>
+</html>
